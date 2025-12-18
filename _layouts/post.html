@@ -4,57 +4,64 @@ layout: default
 
 <article class="post-detail">
   <h1>{{ page.title }}</h1>
-  
+
   <div class="post-meta">
     <div class="meta-item">
       <span class="label">Published</span>
-      <time class="value" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+      <time class="value" datetime="{{ page.date | date_to_xmlschema }}"
+        >{{ page.date | date: "%B %d, %Y" }}</time
+      >
     </div>
     {% if page.author %}
-      <div class="meta-item">
-        <span class="label">Author</span>
-        <span class="value">{{ page.author }}</span>
-      </div>
-    {% endif %}
-    {% if page.category %}
-      <div class="meta-item">
-        <span class="label">Category</span>
-        <span class="value">{{ page.category }}</span>
-      </div>
-    {% endif %}
-  </div>
-  
-  <div class="post-content">
-    {{ content }}
-  </div>
-  
-  {% if page.tags %}
-    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border);">
-      <strong>Tags:</strong>
-      {% for tag in page.tags %}
-        <a href="/tags/{{ tag | slugify }}/" class="tag-link">#{{ tag }}</a>
-      {% endfor %}
+    <div class="meta-item">
+      <span class="label">Author</span>
+      <span class="value">{{ page.author }}</span>
     </div>
-  {% endif %}
-  
-  {% if site.posts.size > 1 %}
-    <nav class="post-navigation">
-      {% assign post_index = site.posts | where: "url", page.url | first %}
-      {% assign post_index = site.posts | indexOf: post_index %}
-      
-      {% if post_index > 0 %}
-        <a href="{{ site.posts[post_index | minus: 1].url }}">
-          <span class="nav-label">← Previous Post</span>
-          <span class="nav-title">{{ site.posts[post_index | minus: 1].title }}</span>
-        </a>
-      {% endif %}
-      
-      {% if post_index < site.posts.size | minus: 1 %}
-        <a href="{{ site.posts[post_index | plus: 1].url }}" style="margin-left: auto;">
-          <span class="nav-label">Next Post →</span>
-          <span class="nav-title">{{ site.posts[post_index | plus: 1].title }}</span>
-        </a>
-      {% endif %}
-    </nav>
+    {% endif %} {% if page.category %}
+    <div class="meta-item">
+      <span class="label">Category</span>
+      <span class="value">{{ page.category }}</span>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="post-content">{{ content }}</div>
+
+  {% if page.tags %}
+  <div
+    style="
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    "
+  >
+    <strong>Tags:</strong>
+    {% for tag in page.tags %}
+    <a href="/tags/{{ tag | slugify }}/" class="tag-link">#{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %} {% if site.posts.size > 1 %}
+  <nav class="post-navigation">
+    {% assign post_index = site.posts | where: "url", page.url | first %} {%
+    assign post_index = site.posts | indexOf: post_index %} {% if post_index > 0
+    %}
+    <a href="{{ site.posts[post_index | minus: 1].url }}">
+      <span class="nav-label">← Previous Post</span>
+      <span class="nav-title"
+        >{{ site.posts[post_index | minus: 1].title }}</span
+      >
+    </a>
+    {% endif %} {% if post_index < site.posts.size | minus: 1 %}
+    <a
+      href="{{ site.posts[post_index | plus: 1].url }}"
+      style="margin-left: auto"
+    >
+      <span class="nav-label">Next Post →</span>
+      <span class="nav-title"
+        >{{ site.posts[post_index | plus: 1].title }}</span
+      >
+    </a>
+    {% endif %}
+  </nav>
   {% endif %}
 </article>

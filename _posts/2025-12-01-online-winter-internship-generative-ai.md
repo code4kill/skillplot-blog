@@ -17,7 +17,7 @@ This internship focuses on building the ability to **think, structure, and work 
 📅 **Internship Period:** December 22, 2025 – January 16, 2026  
 ⏱️ **Total Duration:** ~40 hours (live interactive sessions)  
 🎓 **Eligibility:** Currently enrolled UG / PG students (any discipline)  
-👥 **Seats:** Limited  
+👥 **Seats:** Limited
 
 ## Role & Learning Focus
 
@@ -37,7 +37,7 @@ Upon completing the internship, you'll have:
 - **AI-assisted documents, presentations, and research artifacts** demonstrating applied learning
 - **Exploratory AI-generated media outputs** showcasing creative AI applications
 
-*Note: Select high-quality artifacts may be showcased online. All internship learning material and outputs will be made publicly accessible later as part of Skillplot's open learning initiative.*
+_Note: Select high-quality artifacts may be showcased online. All internship learning material and outputs will be made publicly accessible later as part of Skillplot's open learning initiative._
 
 ## Stipended Support
 
@@ -46,7 +46,7 @@ Upon completing the internship, you'll have:
 
 ## How to Apply
 
-**Applications are now open!** 
+**Applications are now open!**
 
 Click the button below to apply:
 

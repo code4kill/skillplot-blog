@@ -9,7 +9,7 @@ A minimalistic, elegant Jekyll-based blog powered by Skillplot's open ecosystem 
 📱 **Fully Responsive** - Optimized for all screen sizes  
 🚀 **GitHub Pages Ready** - Automatic deployment with Jekyll  
 ♿ **Accessible** - Built with accessibility in mind  
-⚡ **Fast** - Static site generation for optimal performance  
+⚡ **Fast** - Static site generation for optimal performance
 
 ## Local Setup
 
@@ -21,17 +21,20 @@ A minimalistic, elegant Jekyll-based blog powered by Skillplot's open ecosystem 
 ### Installation
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/skillplot/blog.git
    cd blog
    ```
 
 2. **Install dependencies:**
+
    ```bash
    bundle install
    ```
 
 3. **Run the development server:**
+
    ```bash
    bundle exec jekyll serve
    ```
@@ -64,6 +67,7 @@ Your content here...
 ### Colors and Branding
 
 Edit `assets/css/style.scss` to customize:
+
 - `$dark-bg` - Dark theme background
 - `$accent-red` - Primary accent color
 - Font families and sizes
@@ -72,6 +76,7 @@ Edit `assets/css/style.scss` to customize:
 ### Site Configuration
 
 Edit `_config.yml` to modify:
+
 - Site title and description
 - Site URL and baseurl
 - Author information

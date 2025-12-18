@@ -16,8 +16,16 @@ $light-text: #0a0a0a;
 $light-text-muted: #666666;
 
 // Typography
-$font-heading: "Oswald", "HUMANE", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu;
-$font-body: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;
+$font-heading:
+  "Oswald",
+  "HUMANE",
+  system-ui,
+  -apple-system,
+  "Segoe UI",
+  Roboto,
+  Ubuntu;
+$font-body:
+  "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;
 $font-size-base: 16px;
 $line-height-base: 1.6;
 
@@ -29,7 +37,7 @@ $line-height-base: 1.6;
 
 html {
   scroll-behavior: smooth;
-  
+
   &[data-theme="light"] {
     --bg: #{$light-bg};
     --bg-secondary: #{$light-bg-secondary};
@@ -37,7 +45,7 @@ html {
     --text-muted: #{$light-text-muted};
     --border: #{#dddddd};
   }
-  
+
   &[data-theme="dark"] {
     --bg: #{$dark-bg};
     --bg-secondary: #{$dark-bg-secondary};
@@ -53,11 +61,18 @@ body {
   font-family: $font-body;
   font-size: $font-size-base;
   line-height: $line-height-base;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 // Typography
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $font-heading;
   font-weight: 700;
   text-transform: uppercase;
@@ -95,8 +110,10 @@ p {
 a {
   color: $accent-red;
   text-decoration: none;
-  transition: color 0.2s ease, opacity 0.2s ease;
-  
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+
   &:hover {
     color: $accent-red-hover;
     text-decoration: underline;
@@ -118,7 +135,7 @@ header {
   top: 0;
   z-index: 100;
   padding: 1rem 0;
-  
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -127,7 +144,7 @@ header {
     margin: 0 auto;
     padding: 0 2rem;
   }
-  
+
   .logo {
     font-family: $font-heading;
     font-size: 1.5rem;
@@ -136,36 +153,36 @@ header {
     letter-spacing: 0.03em;
     color: var(--text);
     text-decoration: none;
-    
+
     &:hover {
       color: $accent-red;
     }
   }
-  
+
   .nav-links {
     display: flex;
     gap: 2rem;
     align-items: center;
     list-style: none;
-    
+
     @media (max-width: 768px) {
       gap: 1rem;
       font-size: 0.9rem;
     }
-    
+
     a {
       font-family: $font-body;
       font-size: 0.9rem;
       color: var(--text-muted);
       text-transform: none;
       letter-spacing: normal;
-      
+
       &:hover {
         color: $accent-red;
       }
     }
   }
-  
+
   .theme-toggle {
     background: none;
     border: none;
@@ -174,7 +191,7 @@ header {
     color: var(--text);
     padding: 0.5rem;
     transition: color 0.2s ease;
-    
+
     &:hover {
       color: $accent-red;
     }
@@ -186,7 +203,7 @@ footer {
   border-top: 1px solid var(--border);
   padding: 3rem 2rem;
   margin-top: 4rem;
-  
+
   .footer-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -194,31 +211,31 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
   }
-  
+
   .footer-section {
     h4 {
       color: $accent-red;
       margin-bottom: 1rem;
     }
-    
+
     ul {
       list-style: none;
-      
+
       li {
         margin: 0.5rem 0;
-        
+
         a {
           font-size: 0.9rem;
         }
       }
     }
-    
+
     p {
       font-size: 0.9rem;
       color: var(--text-muted);
     }
   }
-  
+
   .footer-bottom {
     text-align: center;
     padding-top: 2rem;
@@ -241,17 +258,17 @@ main {
   gap: 4rem;
   align-items: center;
   margin-bottom: 4rem;
-  
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .hero-content {
     h1 {
       margin-bottom: 1.5rem;
     }
-    
+
     .hero-subtitle {
       font-size: 1.25rem;
       color: $accent-red;
@@ -259,7 +276,7 @@ main {
       font-weight: 700;
       text-transform: uppercase;
     }
-    
+
     .hero-description {
       color: var(--text-muted);
       line-height: 1.8;
@@ -267,7 +284,7 @@ main {
       max-width: 55ch;
     }
   }
-  
+
   .hero-image {
     display: flex;
     justify-content: center;
@@ -294,45 +311,45 @@ main {
   padding: 2rem;
   border-radius: 4px;
   transition: all 0.3s ease;
-  
+
   &:hover {
     border-color: $accent-red;
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(218, 30, 40, 0.15);
   }
-  
+
   h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
-    
+
     a {
       color: var(--text);
-      
+
       &:hover {
         color: $accent-red;
       }
     }
   }
-  
+
   .post-date {
     font-size: 0.85rem;
     color: var(--text-muted);
     margin-bottom: 1rem;
     display: block;
   }
-  
+
   p {
     color: var(--text-muted);
     margin-bottom: 1rem;
     line-height: 1.7;
   }
-  
+
   .read-more {
     display: inline-block;
     font-weight: 700;
     padding: 0.5rem 0;
     border-bottom: 2px solid $accent-red;
-    
+
     &:hover {
       text-decoration: none;
     }
@@ -343,7 +360,7 @@ main {
 .post-detail {
   max-width: 65ch;
   margin: 0 auto;
-  
+
   .post-meta {
     display: flex;
     gap: 1.5rem;
@@ -351,37 +368,37 @@ main {
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--border);
     flex-wrap: wrap;
-    
+
     .meta-item {
       display: flex;
       flex-direction: column;
-      
+
       .label {
         font-size: 0.75rem;
         text-transform: uppercase;
         color: var(--text-muted);
         margin-bottom: 0.25rem;
       }
-      
+
       .value {
         color: var(--text);
         font-weight: 500;
       }
     }
   }
-  
+
   .post-content {
     font-size: 1.05rem;
     line-height: 1.8;
     color: var(--text);
-    
+
     img {
       max-width: 100%;
       height: auto;
       border-radius: 4px;
       margin: 2rem 0;
     }
-    
+
     code {
       background-color: var(--bg-secondary);
       padding: 0.2em 0.4em;
@@ -390,7 +407,7 @@ main {
       font-size: 0.9em;
       color: $accent-red;
     }
-    
+
     pre {
       background-color: var(--bg-secondary);
       padding: 1.5rem;
@@ -398,14 +415,14 @@ main {
       overflow-x: auto;
       margin: 1.5rem 0;
       border: 1px solid var(--border);
-      
+
       code {
         background: none;
         padding: 0;
         color: inherit;
       }
     }
-    
+
     blockquote {
       border-left: 4px solid $accent-red;
       padding-left: 1.5rem;
@@ -413,45 +430,46 @@ main {
       color: var(--text-muted);
       font-style: italic;
     }
-    
-    ul, ol {
+
+    ul,
+    ol {
       margin: 1.5rem 0;
       padding-left: 2rem;
-      
+
       li {
         margin: 0.5rem 0;
       }
     }
   }
-  
+
   .post-navigation {
     display: flex;
     justify-content: space-between;
     margin-top: 4rem;
     padding-top: 2rem;
     border-top: 1px solid var(--border);
-    
+
     @media (max-width: 768px) {
       flex-direction: column;
       gap: 2rem;
     }
-    
+
     a {
       display: flex;
       flex-direction: column;
       max-width: 45%;
-      
+
       @media (max-width: 768px) {
         max-width: 100%;
       }
-      
+
       .nav-label {
         font-size: 0.85rem;
         text-transform: uppercase;
         color: var(--text-muted);
         margin-bottom: 0.5rem;
       }
-      
+
       .nav-title {
         color: $accent-red;
         font-weight: 700;
@@ -476,18 +494,18 @@ main {
   transition: all 0.2s ease;
   border: none;
   cursor: pointer;
-  
+
   &:hover {
     background-color: $accent-red-hover;
     transform: translateY(-2px);
   }
-  
+
   &.btn-secondary {
     background-color: transparent;
     border: 2px solid $accent-red;
     color: $accent-red;
     padding: 0.55rem 1.3rem;
-    
+
     &:hover {
       background-color: rgba(218, 30, 40, 0.1);
     }
@@ -499,19 +517,19 @@ main {
   header nav {
     padding: 0 1rem;
   }
-  
+
   main {
     padding: 2rem 1rem;
   }
-  
+
   .container {
     padding: 0 1rem;
   }
-  
+
   h1 {
     font-size: 2rem;
   }
-  
+
   h2 {
     font-size: 1.5rem;
   }
@@ -519,10 +537,11 @@ main {
 
 // Print styles
 @media print {
-  header, footer {
+  header,
+  footer {
     display: none;
   }
-  
+
   body {
     background-color: white;
     color: black;
