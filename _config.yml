@@ -3,7 +3,7 @@ description: Deep tech research, AI, and learning. An open ecosystem for collabo
 author: Skillplot
 url: "https://blog.skillplot.org"
 baseurl: ""
-permalink: /:title:/
+permalink: /:title/
 
 # Security
 enforce_ssl: blog.skillplot.org
