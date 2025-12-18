@@ -44,7 +44,7 @@ html {
     --bg-secondary: #{$light-bg-secondary};
     --text: #{$light-text};
     --text-muted: #{$light-text-muted};
-    --border: #{#dddddd};
+    --border: #{$light-border};
   }
 
   &[data-theme="dark"] {
