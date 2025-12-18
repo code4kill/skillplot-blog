@@ -5,21 +5,10 @@ url: "https://blog.skillplot.org"
 baseurl: ""
 permalink: /:title/
 
-# Theme and plugins
-remote_theme: pages-themes/minimal@v0.2.0
+# Plugins (only use ones supported by GitHub Pages)
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-paginate-v2
-
-# Pagination
-pagination:
-  enabled: true
-  per_page: 10
-  permalink: "/page/:num/"
-  title: ":title - Page :num"
-  sort_field: date
-  sort_reverse: true
 
 # Collections
 collections:
