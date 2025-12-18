@@ -29,7 +29,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor/
-  - .github/
 
 # Front matter defaults
 defaults:
