@@ -23,8 +23,8 @@ A minimalistic, elegant Jekyll-based blog powered by Skillplot's open ecosystem 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/skillplot/blog.git
-   cd blog
+   git clone https://github.com/code4kill/skillplot-blog.git
+   cd skillplot-blog
    ```
 
 2. **Install dependencies:**
