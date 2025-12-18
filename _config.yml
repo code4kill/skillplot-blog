@@ -1,0 +1,51 @@
+title: Skillplot Blog
+description: Deep tech research, AI, and learning. An open ecosystem for collaborative learning.
+author: Skillplot
+url: "https://blog.skillplot.org"
+baseurl: ""
+permalink: /:title/
+
+# Theme and plugins
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate-v2
+
+# Pagination
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: "/page/:num/"
+  title: ":title - Page :num"
+  sort_field: date
+  sort_reverse: true
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: "/:title/"
+
+# Markdown processor
+markdown: kramdown
+
+# Sass
+sass:
+  style: compressed
+
+# Exclude files
+exclude:
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .github/
+
+# Front matter defaults
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      type: post
