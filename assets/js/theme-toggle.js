@@ -1,6 +1,7 @@
 // Theme toggle script
 const themeToggle = document.getElementById("theme-toggle");
-const themeIcon = document.getElementById("theme-icon");
+const themeIconDark = document.getElementById("theme-icon-dark");
+const themeIconLight = document.getElementById("theme-icon-light");
 const html = document.documentElement;
 
 // Load saved theme or default to dark
@@ -19,7 +20,13 @@ themeToggle.addEventListener("click", () => {
 });
 
 function updateThemeIcon(theme) {
-  themeIcon.textContent = theme === "dark" ? "☀️" : "🌙";
+  if (theme === "dark") {
+    themeIconDark.classList.remove("hidden");
+    themeIconLight.classList.add("hidden");
+  } else {
+    themeIconDark.classList.add("hidden");
+    themeIconLight.classList.remove("hidden");
+  }
 }
 
 // Respect system preference if no saved theme

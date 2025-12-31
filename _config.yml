@@ -5,6 +5,9 @@ url: "https://blog.skillplot.org"
 baseurl: ""
 permalink: /:title/
 
+# Security
+enforce_ssl: blog.skillplot.org
+
 # Plugins (only use ones supported by GitHub Pages)
 plugins:
   - jekyll-feed
