@@ -4,12 +4,17 @@
       <a
         href="https://skillplot.org"
         style="display: inline-block; margin-bottom: 1rem"
+        aria-label="Skillplot home"
       >
-        <img
-          src="{{ '/assets/images/skillplot-wordmark.webp' | relative_url }}"
-          alt="Skillplot"
-          style="height: 40px; width: auto"
-        />
+        <picture>
+          <source srcset="{{ '/assets/images/skillplot-wordmark.webp' | relative_url }}" type="image/webp" />
+          <source srcset="{{ '/assets/images/skillplot-wordmark.svg' | relative_url }}" type="image/svg+xml" />
+          <img
+            src="{{ '/assets/images/skillplot-wordmark.svg' | relative_url }}"
+            alt="Skillplot logo"
+            style="height: 40px; width: auto"
+          />
+        </picture>
       </a>
       <p>
         An open ecosystem for deep tech research and collaborative learning.

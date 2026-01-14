@@ -30,6 +30,7 @@ A minimalistic, elegant Jekyll-based blog powered by Skillplot's open ecosystem 
 2. **Install dependencies:**
 
    ```bash
+   bundle config set --local path vendor/bundle
    bundle install
    ```
 

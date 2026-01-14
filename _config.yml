@@ -12,6 +12,13 @@ enforce_ssl: blog.skillplot.org
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  # Enable pagination to display more than a handful of posts on the
+  # blog index. This plugin is supported by GitHub Pages.
+  - jekyll-paginate
+
+# Pagination settings. Adjust `paginate` to change how many posts appear per page.
+paginate: 5
+paginate_path: "/page:num/"
 
 # Collections
 collections:

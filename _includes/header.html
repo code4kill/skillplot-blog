@@ -1,11 +1,17 @@
 <header>
   <nav>
-    <a href="/" class="logo">
-      <img
-        src="{{ '/assets/images/skillplot-wordmark.webp' | relative_url }}"
-        alt="Skillplot"
-        style="height: 40px; width: auto"
-      />
+    <a href="/" class="logo" aria-label="Skillplot home">
+      <picture>
+        <!-- Prefer WebP for modern browsers -->
+        <source srcset="{{ '/assets/images/skillplot-wordmark.webp' | relative_url }}" type="image/webp" />
+        <!-- Fall back to SVG if the WebP file is missing or unsupported -->
+        <source srcset="{{ '/assets/images/skillplot-wordmark.svg' | relative_url }}" type="image/svg+xml" />
+        <img
+          src="{{ '/assets/images/skillplot-wordmark.svg' | relative_url }}"
+          alt="Skillplot logo"
+          style="height: 40px; width: auto"
+        />
+      </picture>
     </a>
 
     <ul class="nav-links">
